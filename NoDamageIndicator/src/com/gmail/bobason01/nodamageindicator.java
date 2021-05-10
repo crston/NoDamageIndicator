@@ -15,7 +15,7 @@ import com.comphenix.protocol.wrappers.WrappedParticle;
 
 
 public class nodamageindicator extends main implements Listener {
-    public void onLoad() {
+    public void onEnable() {
         ProtocolManager manager = ProtocolLibrary.getProtocolManager();
         manager.addPacketListener(new PacketAdapter(this, ListenerPriority.NORMAL, new PacketType[]{Server.WORLD_PARTICLES}) {
             public void onPacketSending(PacketEvent event) {
